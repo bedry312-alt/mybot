@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #1a1a2e;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.game-container {
+    width: 100%;
+    max-width: 800px;
+    background: #162447;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.character-section {
+    background: #1f4068;
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid #e43f5a;
+}
+
+.enemy-section {
+    border-color: #e43f5a; /* لون أحمر للأعداء */
+}
+
+.player-section {
+    border-color: #4ee54e; /* لون أخضر للاعب */
+}
+
+.character-info h2 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.health-bar-container {
+    background: #0f172a;
+    border-radius: 10px;
+    height: 20px;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 5px;
+    border: 1px solid #fff;
+}
+
+.health-bar {
+    background: linear-gradient(90deg, #ff416c, #ff4b2b);
+    height: 100%;
+    width: 100%;
+    transition: width 0.4s ease;
+}
+
+.player-section .health-bar {
+    background: linear-gradient(90deg, #11998e, #38ef7d);
+}
+
+.shield-text {
+    font-size: 0.9rem;
+    color: #00bfff;
+    font-weight: bold;
+}
+
+.battlefield {
+    background: #0f172a;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    min-height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px dashed #53354a;
+}
+
+.battle-status {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #f4b41a;
+}
+
+.cards-hand {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #e43f5a;
+    color: #fff;
+    width: 130px;
+    height: 180px;
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-align: center;
+    border: 2px solid #fff;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(255,255,255,0.2);
+}
+
+/* ألوان مختلفة لكل نوع بطاقة */
+.card.attack { background: #b83b5e; }
+.card.defense { background: #3f72af; }
+.card.heal { background: #2fc4b2; }
+
+.card-name { font-weight: bold; font-size: 1rem; }
+.card-desc { font-size: 0.8rem; color: #f3f3f3; }
+.card-value { font-size: 1.2rem; font-weight: bold; background: rgba(0,0,0,0.2); border-radius: 5px; padding: 2px; }
+
+/* تعطيل البطاقات أثناء دور الكمبيوتر */
+.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}
