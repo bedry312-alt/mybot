@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>معركة البطاقات الاستراتيجية</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="game-container">
+        <div class="character-section enemy-section">
+            <div class="character-info">
+                <h2>الوحش الرقمي (الكمبيوتر)</h2>
+                <div class="health-bar-container">
+                    <div id="enemy-health-bar" class="health-bar" style="width: 100%;"></div>
+                </div>
+                <p>نقاط الحياة: <span id="enemy-health-text">100</span>/100</p>
+                <p id="enemy-shield-text" class="shield-text">الدرع: 0</p>
+            </div>
+        </div>
+
+        <div class="battlefield">
+            <div id="battle-status" class="battle-status">تبدأ المعركة! دورك الآن...</div>
+        </div>
+
+        <div class="character-section player-section">
+            <div class="character-info">
+                <h2>البطل الشجاع (أنت)</h2>
+                <div class="health-bar-container">
+                    <div id="player-health-bar" class="health-bar" style="width: 100%;"></div>
+                </div>
+                <p>نقاط الحياة: <span id="player-health-text">100</span>/100</p>
+                <p id="player-shield-text" class="shield-text">الدرع: 0</p>
+            </div>
+
+            <div id="cards-hand" class="cards-hand">
+                </div>
+        </div>
+    </div>
+
+    <script href="script.js" src="script.js"></script>
+</body>
+</html>
